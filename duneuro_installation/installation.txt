@@ -1,0 +1,51 @@
+0) If you are using Windows : Install WSL
+
+- There are multiple ways to install a WSL distribution. We recommend installing an 
+  Ubuntu distribution. If you have a tarball of a distribution, install it via
+	wsl --import <NAME> <INSTALLATIONLOCATION> <TARBALLFILENAME>
+
+1) Install dependencies
+
+sudo apt update
+sudo apt install build-essential
+sudo apt install cmake
+sudo apt install git
+sudo apt install libeigen3-dev
+sudo apt install libpython3-dev
+sudo apt install libsuitesparse-dev
+sudo apt install gfortran
+sudo apt install libtbb-dev
+sudo apt install libsuperlu-dev
+sudo apt install g++-9
+
+For visualization purposes we also recommend to install paraview via
+
+sudo apt install paraview
+
+2) Update config_release.opts
+
+- set SIMBIOSPHERE_ROOT to the corresponding directory
+
+3) Clone the library
+
+- First make the clone script executable via
+	chmod +x clone_duneuro.sh
+- Run the clone script via
+	./clone_duneuro
+
+4) Compile the library
+
+- From the folder where you ran the clone script, run
+	dune-common/bin/dunecontrol --opts=config_release.opts --builddir=`pwd`/build-release all
+  This will start the compilation. Once this finishes successfully, the folder build-release
+  will contain all compiled libraries.
+
+5) Test your installation
+
+- After a successful compilation, two binaries called "duneuro_eeg_forward" and
+ "duneuro_meg_forward_test" have been created. Navigate to the corresponding 
+  directories 
+	.../build-release/duneuro_eeg_forward_test/src
+  and
+	.../build-release/duneuro_meg_forward_test/src  	
+  and run these executables to test if everything works as expected. 
