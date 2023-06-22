@@ -1,4 +1,4 @@
-0) If you are using Windows : Install WSL
+0) If you are using Windows: Install WSL
 
 - There are multiple ways to install a WSL distribution. We recommend installing an 
   Ubuntu distribution. If you have a tarball of a distribution, install it via
@@ -18,7 +18,7 @@ sudo apt install libtbb-dev
 sudo apt install libsuperlu-dev
 sudo apt install g++-9
 
-For visualization purposes we also recommend to install paraview via
+For visualization purposes, we also recommend installing ParaView via
 
 sudo apt install paraview
 
@@ -28,7 +28,7 @@ sudo apt install paraview
 
 3) Clone the library
 
-- First make the clone script executable via
+- First, make the clone script executable via
 	chmod +x clone_duneuro.sh
 - Run the clone script via
 	./clone_duneuro
@@ -42,8 +42,8 @@ sudo apt install paraview
 
 5) Test your installation
 
-- After a successful compilation, two binaries called "duneuro_eeg_forward" and
- "duneuro_meg_forward_test" have been created. Navigate to the corresponding 
+- After a successful compilation, two binaries, called "duneuro_eeg_forward" and
+ "duneuro_meg_forward_test", have been created. Navigate to the corresponding 
   directories 
 	.../build-release/duneuro_eeg_forward_test/src
   and
