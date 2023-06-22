@@ -1,0 +1,5 @@
+# ignore duneuro source code and build files
+duneuro_installation/*
+!duneuro_installation/clone_duneuro.sh
+!duneuro_installation/config_release.opts
+!duneuro_installation/installation.txt
