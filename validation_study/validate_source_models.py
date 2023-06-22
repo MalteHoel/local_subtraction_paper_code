@@ -71,7 +71,6 @@ driver_config['solver'] = read_section_into_dict(configs, 'solver_config')
 
 # read electrode config
 electrode_config = read_section_into_dict(configs, 'electrode_config')
-use_projected_electrodes = configs["testing_parameters"].getboolean('use_projected_electrodes')
 
 # read meg config
 driver_config['meg']  = read_section_into_dict(configs, 'meg_config')
@@ -195,12 +194,7 @@ if numerical_simulation_needed:
 # to postprocess the solution, which requires knowledge about the electrode positions
 if do_eeg and (numerical_simulation_needed or not skip_analytical_eeg):
   print(f"Setting electrodes")
-  if use_projected_electrodes:
-    print("Using projected electrodes")
-    electrodes = dp.read_field_vectors_3d(os.path.join(input_folder, 'sensors', 'projected_electrodes.txt'))
-  else:
-    print("Not using projected electrodes")
-    electrodes = dp.read_field_vectors_3d(os.path.join(input_folder, 'sensors', 'electrodes.txt'))
+  electrodes = dp.read_field_vectors_3d(os.path.join(input_folder, 'sensors', 'electrodes.txt'))
   if numerical_simulation_needed:
     meeg_driver.setElectrodes(electrodes, electrode_config)
   print(f"Electrodes set")
