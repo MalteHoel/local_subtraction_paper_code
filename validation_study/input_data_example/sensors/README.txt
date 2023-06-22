@@ -1,4 +1,4 @@
-We assume the files do contain the data in the following format.
+We assume the files to be organized as follows.
 
 electroces.txt:
   Each row contains the three cartesian coordinates of the electrodes. The number of rows corresponds to the number of electrodes.
