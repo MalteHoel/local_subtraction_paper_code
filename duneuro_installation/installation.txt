@@ -22,16 +22,16 @@ For visualization purposes, we also recommend installing ParaView via
 
 sudo apt install paraview
 
-2) Update config_release.opts
-
-- set SIMBIOSPHERE_ROOT to the corresponding directory
-
-3) Clone the library
+2) Clone the library
 
 - First, make the clone script executable via
-	chmod +x clone_duneuro.sh
+        chmod +x clone_duneuro.sh
 - Run the clone script via
-	./clone_duneuro
+        ./clone_duneuro
+
+3) Update config_release.opts
+
+- set SIMBIOSPHERE_ROOT to the corresponding directory. The corresponding repository was cloned in step 2).
 
 4) Compile the library
 
