@@ -463,7 +463,7 @@ else:
 # create pandas dataframe for later creation of boxplots via seaborn. For the structure of the constructed dataframe look at the parameter description of the function "create_boxplots"
 # params  :
 #   - eccentricity_selection      : list of strings, where each string represents an eccentricity to include in the boxplot, e.g. ['0.7', '0.8', '0.9']
-#   - source_model_selection      : list of strings, where each string represents a source model to include in the boxplot, e.g. ['venant', 'localized_subtraction']
+#   - source_model_selection      : list of strings, where each string represents a source model to include in the boxplot, e.g. ['venant', 'local_subtraction']
 #   - basefolder                  : basefolder for the current testing modality, e.g. 'output/results/eeg/radial'
 #   - orientation_tag             : 'radial' or 'tangential'
 def create_dataframe(eccentricity_selection, source_model_selection, basefolder, orientation_tag):

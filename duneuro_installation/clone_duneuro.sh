@@ -14,11 +14,9 @@ for i in alugrid; do
 	git clone --branch releases/2.8 https://gitlab.dune-project.org/extensions/dune-$i.git;
 done;
 
-git clone --branch vtu_writer_dune_grid https://github.com/MalteHoel/duneuro_localized_subtraction_cg.git
+git clone --siam_paper_local_subtraction vtu_writer_dune_grid https://github.com/MalteHoel/duneuro_localized_subtraction_cg.git
 
-git clone --branch reworked_visualization https://github.com/MalteHoel/duneuro-py.git
-
-git clone --branch reworked_visualization https://github.com/MalteHoel/duneuro-matlab-dev.git
+git clone --branch siam_paper_local_subtraction https://github.com/MalteHoel/duneuro-py.git
 
 # download and build simbiosphere
 for i in simbiosphere; do
