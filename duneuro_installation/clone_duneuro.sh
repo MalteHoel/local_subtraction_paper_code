@@ -14,7 +14,7 @@ for i in alugrid; do
 	git clone --branch releases/2.8 https://gitlab.dune-project.org/extensions/dune-$i.git;
 done;
 
-git clone --branch siam_paper_local_subtraction https://github.com/MalteHoel/duneuro_localized_subtraction_cg.git
+git clone --branch siam_paper_local_subtraction https://github.com/MalteHoel/duneuro_local_subtraction.git
 
 git clone --branch siam_paper_local_subtraction https://github.com/MalteHoel/duneuro-py.git
 
