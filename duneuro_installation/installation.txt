@@ -31,7 +31,7 @@ sudo apt install paraview
 
 3) Update config_release.opts
 
-- set SIMBIOSPHERE_ROOT to the corresponding directory. The corresponding repository was cloned in step 2).
+- set SIMBIOSPHERE_ROOT to the corresponding directory. The simbiosphere repository was cloned in step 2).
 
 4) Compile the library
 
