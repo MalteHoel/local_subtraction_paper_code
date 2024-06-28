@@ -115,6 +115,10 @@ for source_model in source_model_list:
 # read transfer matrix configs
 transfer_configs = {}
 transfer_configs['solver'] = read_section_into_dict(configs, 'transfer_config.solver')
+if 'grainSize' in transfer_configs['solver']:
+    transfer_configs['grainSize'] = transfer_configs['solver']['grainSize']
+if 'numberOfThreads' in transfer_configs['solver']:
+    transfer_configs['numberOfThreads'] = transfer_configs['solver']['numberOfThreads']
 force_transfer_recomputation = configs['transfer_config.solver'].getboolean('force_recomputation', False)
 
 # read testing parameters
