@@ -14,9 +14,16 @@ These scripts can be used to reproduce the results for realistic meshes shown in
     The script "visualize_potential_on_slice.py" produces a npz archive as output. The path to this archive has to be added to the script "visualize_head_model.py"
 
 3) Install dependencies
+
+  On Ubuntu 24.04, you can do
   sudo apt install python3-numpy
   sudo apt install python3-skimage
   sudo apt install python3-matplotlib
+  
+  On older Ubuntu distributions the version of skimage in the package repository is
+  not recent enough. In this case, you thus need to use pip to install a more recent 
+  version of scikit-image that fits to your environment. The plots in the paper were
+  created using version 0.22.0 of scikit-image.
   
   Furthermore, by default the images are created from Matplotlib using LaTeX. If you 
   want to exactly reproduce the figures from the paper, please install the following.
