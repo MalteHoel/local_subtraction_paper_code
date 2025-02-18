@@ -18,25 +18,27 @@ sudo apt install libtbb-dev
 sudo apt install libsuperlu-dev
 sudo apt install g++-9
 
+Note that g++-9 is not needed on Ubuntu 24.04.
 For visualization purposes, we also recommend installing ParaView via
 
 sudo apt install paraview
 
-2) Clone the library
+2) Clone the library. We currently target three different releases of Ubuntu, i.e. versions 20.04, 22.04, and 24.04.
+In principle, DUNEuro also runs on other systems, but the compilation might not work out of the box.
 
-- First, make the clone script executable via
-        chmod +x clone_duneuro.sh
+- First, choose the clone script corresponding to your operating system and make it executable via
+        chmod +x clone_duneuro_ubuntu_XX.XX.sh
 - Run the clone script via
-        ./clone_duneuro
+        ./clone_duneuro_ubuntu_XX.XX.sh
 
-3) Update config_release.opts
+3) Update the config_release_ubuntu_XX.XX.opts file corresponding to your operating system.
 
 - set SIMBIOSPHERE_ROOT to the corresponding directory. The simbiosphere repository was cloned in step 2).
 
 4) Compile the library
 
 - From the folder where you ran the clone script, run
-	dune-common/bin/dunecontrol --opts=config_release.opts --builddir=`pwd`/build-release all
+	dune-common/bin/dunecontrol --opts=config_release_ubuntu_XX.XX.opts --builddir=`pwd`/build-release all
   This will start the compilation. Once this finishes successfully, the folder build-release
   will contain all compiled libraries.
 

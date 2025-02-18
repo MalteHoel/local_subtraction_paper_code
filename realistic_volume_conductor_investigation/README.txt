@@ -8,8 +8,8 @@ These scripts can be used to reproduce the results for realistic meshes shown in
 1) Build DUNEuro
   - For this, we refer to the "installation.txt" file in the "duneuro_installation" folder.
 
-2) Adapt the necessary paths
-  - In "visualize_potential_on_slice.py" the paths to the volume conductor and the path to the duneuro-py library have to be added.
+2) Adapt the necessary paths and flags.
+  - In "visualize_potential_on_slice.py" the paths to the volume conductor and the path to the duneuro-py library have to be added. Additionally, the flag "os_is_ubuntu_24" needs to be set to either True or False.
   - The script "visualize_head_model.py" assumes that the script "visualize_potential_on_slice.py" has already been run.
     The script "visualize_potential_on_slice.py" produces a npz archive as output. The path to this archive has to be added to the script "visualize_head_model.py"
 

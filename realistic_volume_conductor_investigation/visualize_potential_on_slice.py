@@ -25,6 +25,10 @@ volume_conductor_path = 'TO_FILL_IN'
 # Please specify the path to the DUNEuro installation below
 duneuropy_path='TO_FILL_IN'
 
+# Please specify if you are using Ubuntu 24.04. 
+# If you are using Ubuntu 20.04 or Ubuntu 22.04, the following flag should be False. If you are using Ubuntu 24.04, it should be True.
+os_is_ubuntu_24 = 'TO_FILL_IN'
+
 # Definition of the dipole used for forward simulation and visualization.
 # The dipole below is a tangential dipole on the anterior wall of the post-central gyrus.
 # We interprete the dipole moment as having units of nAm. If the mesh coordinates are given in mm, and the conductivities
@@ -113,7 +117,7 @@ if not only_visualize:
   }
   potential_approach_config_local_subtraction = \
   {
-    'type' : 'localized_subtraction',
+    'type' : 'local_subtraction',
     'restrict' : False,
     'initialization' : 'single_element',
     'intorderadd_eeg_patch' : 0,
@@ -158,7 +162,11 @@ if not only_visualize:
     grid_indices[i] = np.array(grid_indices_raw[i])
 
   print('Evaluating correction potential on slice')
-  correction_potential_values = np.array(meeg_driver.evaluateFunctionAtPositionsInsideMesh(correction_potential_storage, position_coordinates_raw))
+  if os_is_ubuntu24:
+    function_evaluation_config = {'evaluation_return_type' : 'potential'}
+    correction_potential_values = np.array(meeg_driver.evaluateFunctionAtPositions(correction_potential_storage, position_coordinates_raw, function_evaluation_config))
+  else:  
+    correction_potential_values = np.array(meeg_driver.evaluateFunctionAtPositionsInsideMesh(correction_potential_storage, position_coordinates_raw))
   print('Correction potential on slice evaluated')
 
   print('Evaluating infinity potential on slice')

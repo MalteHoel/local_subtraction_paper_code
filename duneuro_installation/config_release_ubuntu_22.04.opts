@@ -1,0 +1,21 @@
+# optimize compilation using -O3
+# use release build type
+# disable the external library MPI
+# use g++ and gcc compilers
+# specify the path to Matlab (for duneuro-matlab)
+# set number of threads for build process using -j2
+
+CMAKE_FLAGS="\
+  -G \"Unix Makefiles\"\
+  -DCMAKE_CXX_FLAGS=\"-O3 -std=c++17 -march=native -fno-common\"\
+  -DCMAKE_BUILD_TYPE=Release\
+  -DCMAKE_DISABLE_FIND_PACKAGE_MPI=TRUE\
+  -DCMAKE_CXX_COMPILER=g++-9\
+  -DCMAKE_C_COMPILER=gcc-9\
+  -DCMAKE_FIND_LIBRARY_SUFFIXES=\".a .so\"\
+  -DSIMBIOSPHERE_ROOT=/PATH/TO/SIMBIOSPHERE\
+  -DDUNE_REENABLE_ADD_TEST=TRUE \
+  -DDUNE_PYTHON_VIRTUALENV_SETUP=TRUE \
+  -DDUNE_PYTHON_ALLOW_GET_PIP=TRUE \
+"
+MAKE_FLAGS="-j2"
