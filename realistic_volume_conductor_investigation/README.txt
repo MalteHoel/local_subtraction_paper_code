@@ -21,7 +21,7 @@ These scripts can be used to reproduce the results for realistic meshes shown in
   sudo apt install python3-matplotlib
   
   On older Ubuntu distributions the version of skimage in the package repository is
-  not recent enough. In this case, you thus need to use pip to install a more recent 
+  not recent enough. In this case, you can use pip to install a more recent 
   version of scikit-image that fits to your environment. The plots in the paper were
   created using version 0.22.0 of scikit-image.
   

@@ -6,6 +6,9 @@
 
 1) Install dependencies
 
+The three targeted systems, i.e. Ubuntu 24.04, 22.04, and 20.04, share the following 
+dependencies.
+
 sudo apt update
 sudo apt install build-essential
 sudo apt install cmake
@@ -17,9 +20,15 @@ sudo apt install libsuitesparse-dev
 sudo apt install gfortran
 sudo apt install libtbb-dev
 sudo apt install libsuperlu-dev
+
+On Ubuntu 20.04 and Ubuntu 22.04, you also need
+
 sudo apt install g++-9
 
-Note that g++-9 is not needed on Ubuntu 24.04.
+On Ubuntu 20.04, you additionally need
+
+sudo apt install python3-distutils
+
 For visualization purposes, we also recommend installing ParaView via
 
 sudo apt install paraview
