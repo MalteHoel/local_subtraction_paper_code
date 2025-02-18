@@ -31,4 +31,10 @@ In the following, we describe what needs to be done to run the validation script
   
     and similarly for the path to the simbiosphere build.
 
+4) Install Python dependencies
+  - We require certain Python packages to be installed. This can be done via the following.
+   sudo apt install python3-numpy
+   sudo apt install python3-pandas
+   sudo apt install python3-seaborn
+
 Now you can run the "validate_source_models.py" script. After this script finished the designated output folder contains the results of the numerical simulation.

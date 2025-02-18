@@ -162,7 +162,7 @@ if not only_visualize:
     grid_indices[i] = np.array(grid_indices_raw[i])
 
   print('Evaluating correction potential on slice')
-  if os_is_ubuntu24:
+  if os_is_ubuntu_24:
     function_evaluation_config = {'evaluation_return_type' : 'potential'}
     correction_potential_values = np.array(meeg_driver.evaluateFunctionAtPositions(correction_potential_storage, position_coordinates_raw, function_evaluation_config))
   else:  

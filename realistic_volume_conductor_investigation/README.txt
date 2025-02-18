@@ -13,5 +13,18 @@ These scripts can be used to reproduce the results for realistic meshes shown in
   - The script "visualize_head_model.py" assumes that the script "visualize_potential_on_slice.py" has already been run.
     The script "visualize_potential_on_slice.py" produces a npz archive as output. The path to this archive has to be added to the script "visualize_head_model.py"
 
-3) Run the scripts
+3) Install dependencies
+  sudo apt install python3-numpy
+  sudo apt install python3-skimage
+  sudo apt install python3-matplotlib
+  
+  Furthermore, by default the images are created from Matplotlib using LaTeX. If you 
+  want to exactly reproduce the figures from the paper, please install the following.
+  
+  sudo apt install texlive
+  sudo apt install texlive-latex-extra
+  sudo apt install cm-super
+  sudo apt install dvipng
+
+4) Run the scripts
   - For "visualize_potential_on_slice.py", you have to specify whether you want to investigate the analytical or the local subtraction approach by setting the "potential_appraoch" flag. We initially set this flag to the analytical subtraction approach.
