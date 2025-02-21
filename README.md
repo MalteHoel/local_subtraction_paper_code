@@ -1,5 +1,5 @@
 This repository contains the scripts used in the numerical evaluation of the Local Subtraction Approach for EEG and MEG forward modeling. 
-This approach is introduced and investigated in the accompanying paper (Preprint available at: https://arxiv.org/abs/2302.12785).
+This approach is introduced and investigated in the accompanying paper (Published in SIAM Journal on Scientific computing: https://epubs.siam.org/doi/full/10.1137/23M1582874).
 
 More concretely, the repository contains three top-level folders, which are described in the following.
 
@@ -7,7 +7,15 @@ More concretely, the repository contains three top-level folders, which are desc
    
   The Local Subtraction Approach has been implemented into the DUNEuro toolbox, an open-source C++ toolbox for neuroscience applications based on the DUNE framework.
   (See Schrader et. al., "DUNEuro—A software toolbox for forward modeling in bioelectromagnetism", 2021, DOI: 10.1371/journal.pone.0252431, for an introduction to DUNEuro.)
+  
   To run the validation scripts, you need an installation of DUNEuro. To this end, the duneuro_installation folder contains a clone script that selects compatible versions of the necessary DUNE- and DUNEuro modules. We refer to the file duneuro_installation/installation.txt for a detailed description of the installation process.
+
+  Alternatively, we have prepared a Docker image that contains the compiled DUNEuro library and the data and scripts needed to reproduce the results from the paper. If you have
+  Docker installed, you can pull this image via
+  
+  docker pull registry.dune-project.org/duneuro/duneuro/local_subtraction_sisc_code_ubuntu:24.04
+  
+  Note that this image is based on Ubuntu 24.04.
 
 2) multilayer_sphere_validation_study
 
